@@ -1,9 +1,37 @@
 import java.util.Scanner;
 
 public class MindBaby {
+	/*
+	 * public static void main(String[] args) { Scanner scan = new
+	 * Scanner(System.in);
+	 * 
+	 * double dist = distance(x1, x2, y1, y2); double Vcube = cubevolume(cube);
+	 * double Vpyra = pyramidvolume(pyrvol, pyrvol2, pyrvol3); double Atria =
+	 * trianglearea(base, height); double Asqua = squarearea(sqside); double
+	 * Arect = rectanglearea(length, width); double Apent =
+	 * pentagonarea(pentside); double Ahexa = hexagonarea(hexside); double Vrect
+	 * = rectanglevolume(rectvol, rectvol2, rectvol3); double Vpent =
+	 * pentagonvolume(pentvol, pentvol2); double Vhexa = hexagonvolume(hexvol,
+	 * hexvol2); double SApyr = pyramidsurfacearea(pyrSA, pyrSA2, pyrSA3);
+	 * double SAcub = cubesurfacearea(cubeSA); double SArec =
+	 * rectangleprismsurfacearea(rectSA, rectSA2, rectSA3); double SApen =
+	 * pentagonprismsurfacearea(pentSA, pentSA2); double SAhex =
+	 * hexagonprismsurfacearea(hexSA, hexSA2); double Qnega =
+	 * quadraticnegative(a, b, c); double Qposi = quadraticpositive(a, b, c);
+	 * 
+	 * System.out.println(Atria); System.out.println(Asqua);
+	 * System.out.println(Arect); System.out.println(Apent);
+	 * System.out.println(Ahexa); System.out.println(dist);
+	 * System.out.println(Vcube); System.out.println(Vpyra);
+	 * System.out.println(Vrect); System.out.println(Vpent);
+	 * System.out.println(Vhexa); System.out.println(SApyr);
+	 * System.out.println(SAcub); System.out.println(SArec);
+	 * System.out.println(SApen); System.out.println(SAhex);
+	 * System.out.println(Qnega); System.out.println(Qposi); }
+	 */
+
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-
 		System.out.println("What formula would you like to use");
 		String equation = scan.nextLine();
 		// Distance
@@ -27,12 +55,13 @@ public class MindBaby {
 			System.out.println("What shape are you solving for");
 			String volume = scan.nextLine();
 			if (volume.equals("pyramid")) {
-				System.out.println("What is your lenght value");
+				System.out.println("What is your length value");
 				String pyrvol = scan.nextLine();
 				System.out.println("What is your width value");
 				String pyrvol2 = scan.nextLine();
 				System.out.println("What is your height value");
 				String pyrvol3 = scan.nextLine();
+
 			} else if (volume.equals("cube")) {
 				System.out.print("What is your side length");
 				String cube = scan.nextLine();
@@ -41,13 +70,16 @@ public class MindBaby {
 				String pentvol = scan.nextLine();
 				System.out.println("What is your height value");
 				String pentvol2 = scan.nextLine();
+
 			} else if (volume.equals("rectangle")) {
 				System.out.println("What is your lenght value");
-				String rectvol = scan.nextLine();
+				double length = Double.parseDouble(scan.nextLine());
 				System.out.println("What is your width value");
-				String rectvol2 = scan.nextLine();
+				double width = Double.parseDouble(scan.nextLine());
 				System.out.println("What is your height value");
-				String rectvol3 = scan.nextLine();
+				double height = Double.parseDouble(scan.nextLine());
+				double rectVolume = rectanglevolume(length, width, height);
+				System.out.println("The volume of this rectangle is: " + rectVolume);
 			} else if (volume.equals("hexagon")) {
 				System.out.print("What is your side length");
 				String hexvol = scan.nextLine();
@@ -137,7 +169,24 @@ public class MindBaby {
 			System.out.print("Im sorry, this is not a formula we are familiar with");
 		}
 	}
-	
-	
+
+	public static double rectanglevolume(double w, double h, double l) {
+		return (w * h * l);
+	}
+
+	public static double cubevolume(double x) {
+		double xpart = Math.pow(x, 3);
+		return xpart;
+	}
+
+	public static double pyramidvolume(double h, double l, double w) {
+		return Math.sqrt((w * h * l) / 3);
+	}
+
+	public static double distance(double x1, double y1, double x2, double y2) {
+		double xpart = Math.pow(x1 - x2, 2);
+		double ypart = Math.pow(y1 - y2, 2);
+		return Math.sqrt(xpart + ypart);
+	}
 
 }
