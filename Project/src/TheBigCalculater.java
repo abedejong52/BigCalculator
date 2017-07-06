@@ -3,6 +3,43 @@ public class TheBigCalculater {
 
 	public static void main(String[] args) {
 		printHello();
+		//double dist = distance(0, 0, 3, 4);
+		double Vcube = cubevolume(2);
+		double Vpyra = pyramidvolume(7, 6);
+		double Atria = trianglearea(5, 2);
+		double Asqua = squarearea(3);
+		double Arect = rectanglearea(5, 2); 
+		double Apent = pentagonarea(4);
+		double Ahexa = hexagonarea(4);
+		double Vrect = rectanglevolume(5, 5, 5);
+		double Vpent = pentagonvolume(4, 5);
+		double Vhexa = hexagonvolume(4, 5);
+		double SApyr = pyramidsurfacearea(4, 5, 5);
+		double SAcub = cubesurfacearea(5);
+		double SArec = rectangleprismsurfacearea(4, 5, 5);
+		double SApen = pentagonprismsurfacearea(4, 5);
+		double SAhex = hexagonprismsurfacearea(4, 5);
+		double Qnega = quadraticnegative(2, -5, -3);
+		double Qposi = quadraticpositive(2, -5, -3);
+
+		System.out.println(Atria);
+		System.out.println(Asqua);
+		System.out.println(Arect);
+		System.out.println(Apent);
+		System.out.println(Ahexa);
+		//System.out.println(dist);
+		System.out.println(Vcube);
+		System.out.println(Vpyra);
+		System.out.println(Vrect);
+		System.out.println(Vpent);
+		System.out.println(Vhexa);
+		System.out.println(SApyr);
+		System.out.println(SAcub);
+		System.out.println(SArec);
+		System.out.println(SApen);
+		System.out.println(SAhex);
+		System.out.println(Qnega);
+		System.out.println(Qposi);
 	}
 		
 	
@@ -33,7 +70,6 @@ public class TheBigCalculater {
 	}
 	// END AREA
 	// START DISTANCE
-
 	
 	// END DISTANCE
 	// START VOLUME
